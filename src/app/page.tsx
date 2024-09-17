@@ -1,61 +1,64 @@
-import MyButtons from "@/components/Buttons"
-import Image from "next/image"
+import MedicineBox from "@/components/MedicineBox"
+import { medicineBoxData } from "@/lib/constant"
+import { MessageSquareText, Phone, Pill } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="w-full py-36">
-      <div className="flex flex-col gap-8 px-4 md:px-8">
-        <div
-          className={`w-full h-fit md:h-[450px] bg-[#0c86b63b] flex flex-col md:flex-row overflow-hidden rounded-xl`}
-        >
-          <div className=" w-full d:w-1/2 h-full  p-6 md:p-12 flex flex-col justify-center gap-3">
-            <p className="bg-white border-2 border-primaryBlue rounded-full w-fit px-2 py-1 text-xs text-primaryBlue font-semibold font-sans">
-              TABLETS
-            </p>
-            <h2 className="text-2xl md:text-3xl text-black">
-              Aceclofenac, Paracetamol & Serratiopeptidase Tablets
+    <div className="w-full py-20 px-4  md:px-8">
+      <div className="w-full h-screen"></div>
+      {/* Medicine Box Section */}
+      <div className="flex gap-2 items-center">
+        <Pill strokeWidth={2.5} className="text-primaryOrange" size={42} />
+        <h2 className=" text-3xl md:text-5xl font-semibold text-primaryBlue">
+          Our Products
+        </h2>
+      </div>
+      <div className="flex flex-col gap-8 mt-20 ">
+        {medicineBoxData.map((data, i) => {
+          return (
+            <MedicineBox
+              key={i}
+              formula={data.formula}
+              imgUrl={data.imgUrl}
+              tabName={data.tabName}
+              tag={data.tag}
+              btnClass={data.theme}
+              color={data.color}
+              bgColor={data.bgColor}
+            />
+          )
+        })}
+      </div>
+
+      <div className="w-full mx-auto py-20  rounded-3xl  my-20  bg-primaryBlue text-white px-4">
+        <div className="flex mx-auto flex-col w-full lg:w-1/2 justify-center items-center gap-10">
+          <div>
+            <h2 className="font-semibold text-2xl md:text-5xl text-center">
+              Get in touch with
             </h2>
-            <p className="text-2xl font-semibold">TEDFLAM-SP</p>
-            <MyButtons
-              title="View details"
-              bgColor="primaryBlue"
-              btnStyles="mt-3 md:mt-6"
-            />
-          </div>
-          <div className=" w-full md:w-1/2 h-full flex justify-center items-center p-12">
-            <Image
-              src={"/images/pills.png"}
-              width={400}
-              height={250}
-              alt="tablets"
-            />
-          </div>
-        </div>
-        <div
-          className={`w-full h-fit md:h-[450px] bg-[#f5843433] flex flex-col md:flex-row overflow-hidden rounded-xl`}
-        >
-          <div className=" w-full d:w-1/2 h-full  p-6 md:p-12 flex flex-col justify-center gap-3">
-            <p className="bg-white border-2 border-primaryOrange rounded-full w-fit px-2 py-1 text-xs text-primaryOrange font-semibold font-sans">
-              TABLETS
-            </p>
-            <h2 className="text-2xl md:text-3xl text-black">
-              Antioxidants with Multivitamins, Multiminerals, Lycopene, Green
-              Tea Extract & Cyanocobalamin Tablets
+            <h2 className="font-semibold text-2xl md:text-5xl text-center">
+              us with any questions
             </h2>
-            <p className="text-2xl font-semibold">ATP GOLD</p>
-            <MyButtons
-              title="View details"
-              bgColor="primaryOrange"
-              btnStyles="mt-3 md:mt-6"
-            />
           </div>
-          <div className=" w-full md:w-1/2 h-full flex justify-center items-center p-12">
-            <Image
-              src={"/images/pills.png"}
-              width={400}
-              height={250}
-              alt="tablets"
-            />
+          <p className="text-center">
+            {`We're here to help! Whether you have questions about our products,
+            services, or partnerships, feel free to reach out. Our team is ready
+            to assist you with all the information you need. Let's connect and
+            ensure you get the support you deserve.`}
+          </p>
+          <div className="flex gap-6 flex-wrap justify-center items-center">
+            <button
+              className={`px-4 md:px-6 rounded-full py-3 w-fit text-white font-semibold  md:text-lg bg-primaryOrange flex justify-center items-center gap-2`}
+            >
+              <Phone size={24} strokeWidth={1.5} />
+              Call Now
+            </button>
+            <button
+              className={`px-4 md:px-6 rounded-full py-3  w-fit text-white font-semibold  md:text-lg bg-green-500 flex justify-center items-center gap-2`}
+            >
+              <MessageSquareText size={24} strokeWidth={1.5} />
+              Whatsapp
+            </button>
           </div>
         </div>
       </div>

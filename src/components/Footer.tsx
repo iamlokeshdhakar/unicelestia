@@ -46,7 +46,8 @@ export default function Footer() {
     //     </div>
     //   </div>
     // </div>
-    <div className="w-full flex justify-between px-10 items-center flex-col md:flex-row bg-white py-10 border-2 border-b-8  gap-9">
+
+    <div className="w-full flex justify-between px-10 items-center flex-col md:flex-row bg-white py-10 border-2 border-b-8 gap-9 rounded-t-3xl">
       <Image
         src={"/images/full-logo.png"}
         alt="footer-logo"
