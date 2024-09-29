@@ -7,11 +7,11 @@ import { NavbarButtons } from "./NavbarButtons"
 const Navbar = () => {
   const menuBar = [
     { label: "Home", href: "/#home" },
-    { label: "Medicines", href: "/#gallery" }
+    { label: "Products", href: "#gallery" }
   ]
   return (
-    <div className="w-full flex justify-center h-16 items-center z-40 font-semibold bg-white">
-      <div className="w-full fixed h-16 z-50 px-6 flex items-center justify-between border-b-2 border-e-gray-100 overflow-hidden bg-white rounded-b-3xl">
+    <div className="w-full flex justify-center h-16 items-center z-40 font-semibold ">
+      <div className="w-full fixed h-16 z-50 px-6 flex items-center justify-between overflow-hidden bg-white">
         <Link href="/">
           <Image
             src={"/images/full-logo.png"}

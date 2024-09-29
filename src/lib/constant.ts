@@ -18,7 +18,7 @@ export const medicineBoxData = [
     color: "primaryOrange",
     bgColor: "bg-[#f5843433]",
     theme:
-      "bg-primaryOrange border-2 border-primaryOrange hover:bg-primaryOrangeHover"
+      "bg-primaryOrange border-2 border-primaryOrange hover:bg-primaryOrange"
   },
   {
     formula:
@@ -39,7 +39,7 @@ export const medicineBoxData = [
     color: "primaryOrange",
     bgColor: "bg-[#f5843433]",
     theme:
-      "bg-primaryOrange border-2 border-primaryOrange hover:bg-primaryOrangeHover"
+      "bg-primaryOrange border-2 border-primaryOrange hover:bg-primaryOrange"
   },
   {
     formula: "Lycopene with Multivitamins & Multiminerals Syrup",

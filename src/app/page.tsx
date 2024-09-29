@@ -4,7 +4,7 @@ import { MessageSquareText, Phone, Pill } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="w-full py-20 px-4  md:px-8">
+    <div className="w-full">
       <div className="w-full h-screen"></div>
       {/* Medicine Box Section */}
       <div className="flex gap-2 items-center">
@@ -30,7 +30,7 @@ export default function Home() {
         })}
       </div>
 
-      <div className="w-full mx-auto py-20  rounded-3xl  my-20  bg-primaryBlue text-white px-4">
+      <div className="w-full mx-auto py-20 my-20  bg-primaryBlue text-white px-4 bg-gradient-to-b from-primaryBlue to-primaryBlueHover">
         <div className="flex mx-auto flex-col w-full lg:w-1/2 justify-center items-center gap-10">
           <div>
             <h2 className="font-semibold text-2xl md:text-5xl text-center">
@@ -47,20 +47,31 @@ export default function Home() {
             ensure you get the support you deserve.`}
           </p>
           <div className="flex gap-6 flex-wrap justify-center items-center">
-            <button
-              className={`px-4 md:px-6 rounded-full py-3 w-fit text-white font-semibold  md:text-lg bg-primaryOrange flex justify-center items-center gap-2`}
-            >
-              <Phone size={24} strokeWidth={1.5} />
-              Call Now
+            <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium transition bg-primaryOrange text-white">
+              <span>
+                <Phone size={20} strokeWidth={1.5} />
+              </span>
+              <span> Call Now </span>
             </button>
-            <button
-              className={`px-4 md:px-6 rounded-full py-3  w-fit text-white font-semibold  md:text-lg bg-green-500 flex justify-center items-center gap-2`}
-            >
-              <MessageSquareText size={24} strokeWidth={1.5} />
-              Whatsapp
+
+            <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-green-500 px-4 py-2 font-medium transition bg-green-500 hover:text-white">
+              <span>
+                <MessageSquareText size={20} strokeWidth={1.5} />
+              </span>
+              <span> Whatsapp </span>
             </button>
           </div>
         </div>
+      </div>
+
+      <div className="h-fit w-full ">
+        <svg
+          className="inline-block fill-current w-full h-auto text-primaryBlue"
+          viewBox="0 0 1440 450"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1189.2 169.2H421H253.8C159.8 169.2 69.1 203.1 0 262.6V449.8C30.5 349.9 131.3 276.7 252 276.7H424.1H1187.4C1280.9 276.7 1371 243.2 1440 184.3V0C1408.1 97.9 1308.3 169.2 1189.2 169.2Z"></path>
+        </svg>
       </div>
     </div>
   )

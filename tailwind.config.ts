@@ -15,7 +15,6 @@ const config: Config = {
         primaryBlue: "#0C87B6",
         primaryOrange: "#F58634",
         primaryBlueHover: "#0e688b",
-        primaryOrangeHover: "#c9661f"
       },
       borderRadius: {
         lg: "var(--radius)",

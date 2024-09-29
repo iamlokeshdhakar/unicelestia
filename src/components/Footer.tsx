@@ -1,71 +1,131 @@
-import { Mail, Phone } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Footer() {
   return (
-    // <div className="w-full p-6  border-t-2 border-e-gray-100 bg-white">
-    //   {/* <div className="w-full h-64 bg-orange-200 rounded-2xl"></div> */}
-    //   <div className="w-full h-96 rounded-xl flex justify-center items-center gap-4">
-    //     <div className="w-[30%] flex justify-center items-center">
-    //       <div className="bg-slate-100 p-10 rounded-3xl">
-    //         <Image
-    //           src="/images/flogo.png"
-    //           alt="footer-logo"
-    //           width={200}
-    //           height={300}
-    //         />
-    //       </div>
-    //     </div>
-    //     <div className="w-[70%] flex justify-center items-center">
-    //       <div className=" w-72 h-48 px-4">
-    //         <span className="font-medium text-xl">Quick Links</span>
-    //         <div className="w-full h-full flex flex-col">
-    //           <p>Home</p>
-    //           <p>Medicines</p>
-    //           <p>Get Directions</p>
-    //           <p>Contact Us</p>
-    //         </div>
-    //       </div>
-    //       <div className=" w-72 h-48 px-4">
-    //         <span className="font-medium text-xl">Medicines</span>
-    //         <div className="w-full h-full flex flex-col">
-    //           <p>Tedflam-SP</p>
-    //           <p>ATP Gold Tablet</p>
-    //           <p>ATP Gold Syrup</p>
-    //           <p>Rostro-DSR</p>
-    //           <p>Mirazef-S</p>
-    //         </div>
-    //       </div>
-    //       <div className=" w-72 h-48 px-4">
-    //         <span className="font-medium text-xl">Contact Us</span>
-    //         <div className="w-full h-full flex flex-col">
-    //           <p>+91 8923165656</p>
-    //           <p>ucpharmaltd@gmail.com</p>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-
-    <div className="w-full flex justify-between px-10 items-center flex-col md:flex-row bg-white py-10 border-2 border-b-8 gap-9 rounded-t-3xl">
-      <Image
-        src={"/images/full-logo.png"}
-        alt="footer-logo"
-        width={200}
-        height={100}
-      />
-      <div className="flex justify-center items-center text-base font-medium gap-2 md:gap-6 flex-wrap ">
-        <span className="flex gap-1 justify-center items-center cursor-pointer hover:text-primaryOrange">
-          <Phone size={20} strokeWidth={1.5} />
-          +91 8923165656
-        </span>
-        <span className="flex gap-1 justify-center items-center cursor-pointer hover:text-primaryBlue">
-          <Mail size={20} strokeWidth={1.5} />
-          ucpharmaltd@gmail.com
-        </span>
+    <footer className="bg-white">
+      <div className="mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-2 xl:grid-cols-4 xl:px-10">
+        <div className="max-w-sm mx-auto md:mx-0 text-center md:text-left">
+          <div className="mb-6 flex h-12 items-center justify-center md:justify-between space-x-2">
+            <Image
+              alt="logo"
+              src={"/images/full-logo.png"}
+              width={150}
+              height={20}
+            />
+          </div>
+          <div className="text-gray-500">
+            Dedicated to advancing healthcare through the development of
+            innovative and high-quality pharmaceutical products.
+          </div>
+        </div>
+        <div className="text-center md:text-left">
+          <div className="mt-4 mb-2 font-medium xl:mb-4">Address</div>
+          <div className="text-gray-500">
+            26/4 Tilpat, Amarnagar <br />
+            Faridabad, <br />
+            Haryana 121003, IN
+          </div>
+        </div>
+        <div className="text-center md:text-left">
+          <div className="mt-4 mb-2 font-medium xl:mb-4">Products</div>
+          <nav aria-label="Footer Navigation" className="text-gray-500">
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  className="hover:text-blue-600 hover:underline"
+                  href="/products/medicine-name"
+                >
+                  Rostro-DSR
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-blue-600 hover:underline"
+                  href="/products/medicine-name"
+                >
+                  Mirazef-S
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-blue-600 hover:underline"
+                  href="/products/medicine-name"
+                >
+                  Tedflam SP
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-blue-600 hover:underline"
+                  href="/products/medicine-name"
+                >
+                  ATP Gold Tablet
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="hover:text-blue-600 hover:underline"
+                  href="/products/medicine-name"
+                >
+                  ATP Gold Syrup
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="text-center md:text-left">
+          <div className="mt-4 mb-2 font-medium xl:mb-4">Request for price</div>
+          <div className="flex flex-col">
+            <div className="mb-4 flex gap-4 flex-wrap justify-center md:justify-start">
+              <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium text-primaryOrange transition hover:bg-primaryOrange hover:text-white">
+                <span> Call Now </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium text-primaryBlue transition hover:bg-primaryBlue hover:text-white">
+                <span> Whatsapp </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <p>© Unicelestia Pvt. Ltd. 2024</p>
-    </div>
+      <div className="bg-white">
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-gray-500 sm:flex-row sm:justify-between sm:text-left">
+          <div className="">© 2024 Unicelestia | All Rights Reserved</div>
+          <div className="">
+            <Link href="#">Privacy Policy </Link>
+            <span>|</span>
+            <Link href="#"> Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
   )
 }
