@@ -26,6 +26,12 @@ export default function Footer() {
             Faridabad, <br />
             Haryana 121003, IN
           </div>
+          <div className="mt-4 mb-2 font-medium xl:mb-4">Email</div>
+          <div className="text-gray-500">
+            <Link href={"mailto:ucpharmaltd@gmail.com"}>
+              ucpharmaltd@gmail.com
+            </Link>
+          </div>
         </div>
         <div className="text-center md:text-left">
           <div className="mt-4 mb-2 font-medium xl:mb-4">Products</div>

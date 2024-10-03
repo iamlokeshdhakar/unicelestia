@@ -40,7 +40,7 @@ export function HeroSection() {
             Outcomes Through Rigorous Testing and Comprehensive Support.
           </p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <button className="flex items-center justify-center space-x-2 max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
+            <button className="flex  items-center justify-center space-x-2 max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
               <span>Request for price</span>
               <span>
                 <svg
@@ -57,7 +57,7 @@ export function HeroSection() {
                 </svg>
               </span>
             </button>
-            <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
+            <button className="flex  items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
               <span> Whatsapp </span>
               <span>
                 <svg

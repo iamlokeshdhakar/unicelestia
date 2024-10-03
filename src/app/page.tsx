@@ -11,7 +11,7 @@ export default function Home() {
       <InfiniteSlider />
       {/* Medicine Box Section */}
       <div className="flex gap-2 items-center w-full justify-center mt-28 flex-col">
-        <h2 className=" text-4xl md:text-6xl text-center font-semibold ">
+        <h2 className=" text-4xl md:text-6xl text-center font-bold ">
           Our Products
         </h2>
         <p className="max-w-[500px] text-center">
@@ -19,7 +19,7 @@ export default function Home() {
           products designed to enhance your everyday life.
         </p>
       </div>
-      <div className="flex flex-col gap-8 mt-20 px-4 ">
+      <div className="flex flex-col gap-8 mt-20 px-8 md:px-20 ">
         {medicineBoxData.map((data, i) => {
           return (
             <MedicineBox
@@ -28,9 +28,6 @@ export default function Home() {
               imgUrl={data.imgUrl}
               tabName={data.tabName}
               tag={data.tag}
-              btnClass={data.theme}
-              color={data.color}
-              bgColor={data.bgColor}
             />
           )
         })}
