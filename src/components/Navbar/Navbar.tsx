@@ -11,7 +11,7 @@ const Navbar = () => {
   ]
   return (
     <div className="w-full flex justify-center h-16 items-center z-40 font-semibold ">
-      <div className="w-full fixed h-16 z-50 px-6 flex items-center justify-between overflow-hidden bg-white">
+      <div className="w-full fixed h-16 z-50 px-6 flex items-center justify-between overflow-hidden bg-white shadow-md">
         <Link href="/">
           <Image
             src={"/images/full-logo.png"}

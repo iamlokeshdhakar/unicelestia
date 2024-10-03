@@ -1,19 +1,25 @@
+import { HeroSection } from "@/components/HeroSection"
 import MedicineBox from "@/components/MedicineBox"
+import { InfiniteSlider } from "@/components/Scroll"
 import { medicineBoxData } from "@/lib/constant"
-import { MessageSquareText, Phone, Pill } from "lucide-react"
+import { MessageSquareText, Phone } from "lucide-react"
 
 export default function Home() {
   return (
     <div className="w-full">
-      <div className="w-full h-screen"></div>
+      <HeroSection />
+      <InfiniteSlider />
       {/* Medicine Box Section */}
-      <div className="flex gap-2 items-center">
-        <Pill strokeWidth={2.5} className="text-primaryOrange" size={42} />
-        <h2 className=" text-3xl md:text-5xl font-semibold text-primaryBlue">
+      <div className="flex gap-2 items-center w-full justify-center mt-28 flex-col">
+        <h2 className=" text-4xl md:text-6xl text-center font-semibold ">
           Our Products
         </h2>
+        <p className="max-w-[500px] text-center">
+          At the heart of our mission lies a diverse range of innovative
+          products designed to enhance your everyday life.
+        </p>
       </div>
-      <div className="flex flex-col gap-8 mt-20 ">
+      <div className="flex flex-col gap-8 mt-20 px-4 ">
         {medicineBoxData.map((data, i) => {
           return (
             <MedicineBox
