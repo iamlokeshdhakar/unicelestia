@@ -10,7 +10,10 @@ export default function Home() {
       <HeroSection />
       <InfiniteSlider />
       {/* Medicine Box Section */}
-      <div className="flex gap-2 items-center w-full justify-center mt-28 flex-col">
+      <div
+        id="products"
+        className="flex gap-2 items-center w-full justify-center mt-28 flex-col"
+      >
         <h2 className=" text-4xl md:text-6xl text-center font-bold ">
           Our Products
         </h2>

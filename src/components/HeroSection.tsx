@@ -5,10 +5,10 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <BackgroundBeamsWithCollision className="justify-center flex flex-col py-10 md:py-4 md:h-[calc(100vh-64px)]">
-      <section className="w-full">
+      <section className="w-full" id="home">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <Link
-            href="#"
+            href="#products"
             className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full bg-gray-50 hover:bg-gray-100 border-2"
             role="alert"
           >
@@ -25,9 +25,9 @@ export function HeroSection() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </Link>
@@ -40,40 +40,45 @@ export function HeroSection() {
             Outcomes Through Rigorous Testing and Comprehensive Support.
           </p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <button className="flex  items-center justify-center space-x-2 max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
-              <span>Request for price</span>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </button>
-            <button className="flex  items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
-              <span> Whatsapp </span>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </button>
+            <Link href={"tel:+918923165656"}>
+              <button className="flex  items-center justify-center space-x-2 max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
+                <span>Request for price</span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Link>
+
+            <Link href="https://wa.link/xvi9ss">
+              <button className="flex  items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
+                <span> Whatsapp </span>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-6 w-6"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </section>

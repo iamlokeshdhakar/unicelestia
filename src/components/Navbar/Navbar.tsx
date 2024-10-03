@@ -6,11 +6,14 @@ import { NavbarButtons } from "./NavbarButtons"
 
 const Navbar = () => {
   const menuBar = [
-    { label: "Home", href: "/#home" },
-    { label: "Products", href: "#gallery" }
+    { label: "Home", href: "#home1" },
+    { label: "Products", href: "#products" }
   ]
   return (
-    <div className="w-full flex justify-center h-16 items-center z-40 font-semibold ">
+    <div
+      id="home1"
+      className="w-full flex justify-center h-16 items-center z-40 font-semibold "
+    >
       <div className="w-full fixed h-16 z-50 px-6 flex items-center justify-between overflow-hidden bg-white shadow-md">
         <Link href="/">
           <Image
