@@ -1,9 +1,13 @@
 import Product from "@/components/Product"
 
-export default function DetailedProduct() {
+export default function DetailedProduct({
+  params
+}: {
+  params: { pid: string }
+}) {
   return (
     <div className="w-full min-h-screen p-4 flex justify-center items-center">
-      <Product />
+      <Product productName={params.pid} />
     </div>
   )
 }

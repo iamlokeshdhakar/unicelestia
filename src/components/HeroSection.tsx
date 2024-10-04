@@ -39,9 +39,13 @@ export function HeroSection() {
             Every Product We Develop, Committed to Delivering Optimal Patient
             Outcomes Through Rigorous Testing and Comprehensive Support.
           </p>
-          <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <Link href={"tel:+918923165656"}>
-              <button className="flex  items-center justify-center space-x-2 max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
+          <div className="flex flex-col justify-center items-center mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <Link
+              href={"tel:+918923165656"}
+              target="_blank"
+              className="w-full sm:w-fit"
+            >
+              <button className="flex w-full items-center justify-center space-x-2 sm:max-w-1/2 rounded-md border-2 border-primaryOrange px-4 py-2 font-medium hover:text-primaryOrange transition bg-primaryOrange text-white hover:bg-transparent">
                 <span>Request for price</span>
                 <span>
                   <svg
@@ -60,8 +64,12 @@ export function HeroSection() {
               </button>
             </Link>
 
-            <Link href="https://wa.link/xvi9ss">
-              <button className="flex  items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
+            <Link
+              href="https://wa.link/xvi9ss"
+              target="_blank"
+              className="w-full sm:w-fit"
+            >
+              <button className="flex w-full  items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-2 font-medium  transition bg-primaryBlue hover:bg-transparent text-white hover:text-primaryBlue">
                 <span> Whatsapp </span>
                 <span>
                   <svg

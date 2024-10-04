@@ -4,7 +4,7 @@ export const NavbarButtons = () => {
   return (
     <>
       <Link href={"tel:+918923165656"}>
-        <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryOrange px-4 py-1 font-medium text-primaryOrange transition hover:bg-primaryOrange hover:text-white">
+        <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryOrange px-6 md:px-4 py-2 md:py-1 font-medium text-primaryOrange transition hover:bg-primaryOrange hover:text-white">
           <span> Call Now </span>
           <span>
             <svg
@@ -22,8 +22,8 @@ export const NavbarButtons = () => {
           </span>
         </button>
       </Link>
-      <Link href="https://wa.link/xvi9ss">
-        <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-4 py-1 font-medium text-primaryBlue transition hover:bg-primaryBlue hover:text-white">
+      <Link href="https://wa.link/xvi9ss" target="_blank">
+        <button className="flex items-center justify-center space-x-2 rounded-md border-2 border-primaryBlue px-6 md:px-4 py-2 md:py-1 font-medium text-primaryBlue transition hover:bg-primaryBlue hover:text-white">
           <span> Whatsapp </span>
           <span>
             <svg
