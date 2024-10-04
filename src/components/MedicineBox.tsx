@@ -70,8 +70,13 @@ export default function MedicineBox({
           </Link>
         </div>
       </div>
-      <div className=" w-full md:w-1/2 h-full flex justify-center items-center p-12">
-        <Image src={imgUrl} width={400} height={250} alt="tablets" />
+      <div className=" w-full md:w-1/2 h-full flex justify-center items-center  relative">
+        <Image
+          src={imgUrl}
+          width={400}
+          height={400}
+          alt="tablets"
+        />
       </div>
     </div>
   )

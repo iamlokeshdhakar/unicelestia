@@ -2,14 +2,14 @@ export const medicineBoxData = [
   {
     formula:
       "Antioxidants with Multivitamins, Multiminerals, Lycopene, Green Tea Extract & Cyanocobalamin Tablets",
-    imgUrl: "/images/pills.png",
+    imgUrl: "/images/apt_1.png",
     tabName: "ATP GOLD",
     link: '/products/atp-gold-tablets',
     tag: "TABLETS",
   },
   {
     formula: "Rabeprazole Sodium (EC) & Domperidone (SR) Capsules",
-    imgUrl: "/images/pills.png",
+    imgUrl: "/images/rostro.png",
     tabName: "ROSTRO-DSR",
     link: '/products/rostro-dsr-capsules',
     tag: "CAPSULES",
@@ -17,21 +17,21 @@ export const medicineBoxData = [
   {
     formula:
       "Antioxidants with Multivitamins, Multiminerals, Lycopene, Green Tea Extract & Cyanocobalamin Tablets",
-    imgUrl: "/images/pills.png",
+    imgUrl: "/images/tedflam.png",
     tabName: "TEDFLAM-SP",
     link: '/products/tedflam-sp-tablets',
     tag: "TABLETS",
   },
   {
     formula: "Ceftriaxone & Sulbactam for Injection I.P.",
-    imgUrl: "/images/pills.png",
+    imgUrl: "/images/injection.png",
     tabName: "MIRAZEF-S",
     link: '/products/mirazef-s-injection',
     tag: "INJECTION",
   },
   {
     formula: "Lycopene with Multivitamins & Multiminerals Syrup",
-    imgUrl: "/images/pills.png",
+    imgUrl: "/images/apts2.png",
     tabName: "ATP GOLD",
     link: '/products/atp-gold-syrup',
     tag: "SYRUP",
@@ -48,12 +48,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: [
-      { src: "/images/pills.png", alt: "ATP GOLD Tablets" },
-      { src: "/images/pills.png", alt: "ATP GOLD Tablets Image 2" },
-      { src: "/images/pills.png", alt: "ATP GOLD Tablets Image 3" },
-      { src: "/images/pills.png", alt: "ATP GOLD Tablets Image 4" }
-    ],
+    images: "/images/apt_1.png",
     formula: [
       { name: "Antioxidants", percent: "23%" },
       { name: "Multivitamins", percent: "23%" },
@@ -75,12 +70,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: [
-      { src: "/images/pills.png", alt: "ROSTRO-DSR Capsules" },
-      { src: "/images/pills.png", alt: "ROSTRO-DSR Image 2" },
-      { src: "/images/pills.png", alt: "ROSTRO-DSR Image 3" },
-      { src: "/images/pills.png", alt: "ROSTRO-DSR Image 4" }
-    ],
+    images: "/images/apt_1.png",
     formula: [
       { name: "Rabeprazole Sodium", percent: "20%" },
       { name: "Domperidone", percent: "15%" }
@@ -98,12 +88,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: [
-      { src: "/images/pills.png", alt: "TEDFLAM-SP Tablets" },
-      { src: "/images/pills.png", alt: "TEDFLAM-SP Image 2" },
-      { src: "/images/pills.png", alt: "TEDFLAM-SP Image 3" },
-      { src: "/images/pills.png", alt: "TEDFLAM-SP Image 4" }
-    ],
+    images: "/images/apt_1.png",
     formula: [
       { name: "Antioxidants", percent: "25%" },
       { name: "Multivitamins", percent: "20%" },
@@ -123,12 +108,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: [
-      { src: "/images/pills.png", alt: "MIRAZEF-S Injection" },
-      { src: "/images/pills.png", alt: "MIRAZEF-S Image 2" },
-      { src: "/images/pills.png", alt: "MIRAZEF-S Image 3" },
-      { src: "/images/pills.png", alt: "MIRAZEF-S Image 4" }
-    ],
+    images: "/images/apt_1.png",
     formula: [
       { name: "Ceftriaxone", percent: "50%" },
       { name: "Sulbactam", percent: "50%" }
@@ -146,12 +126,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: [
-      { src: "/images/pills.png", alt: "ATP GOLD Syrup" },
-      { src: "/images/pills.png", alt: "ATP GOLD Syrup Image 2" },
-      { src: "/images/pills.png", alt: "ATP GOLD Syrup Image 3" },
-      { src: "/images/pills.png", alt: "ATP GOLD Syrup Image 4" }
-    ],
+    images: "/images/apt_1.png",
     formula: [
       { name: "Lycopene", percent: "20%" },
       { name: "Multivitamins", percent: "30%" },

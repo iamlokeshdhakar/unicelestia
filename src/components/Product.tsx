@@ -1,5 +1,6 @@
 "use client"
 import { products } from "@/lib/constant"
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Product({ productName }: { productName: string }) {
@@ -33,10 +34,22 @@ export default function Product({ productName }: { productName: string }) {
   }
 
   return (
-    <div className="bg-white">
-      <div className="pt-6">
+    <div className="bg-white w-full">
+      <div
+        id="products"
+        className="flex gap-2 items-center w-full justify-center mt-2 rounded-3xl   p-2 md:py-12 flex-col"
+      >
+        <h2 className=" text-4xl md:text-6xl text-center font-bold ">
+          Product Details
+        </h2>
+        <p className="max-w-[500px] text-center">
+          Overview of active components, dosage recommendations, and potential
+          side effects.
+        </p>
+      </div>
+      <div className="pt-6 w-full mt-4 border-t-2 rounded-t-3xl">
         <nav aria-label="Breadcrumb">
-          <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <ol className="mx-auto flex w-full  justify-center items-center space-x-2 px-4 sm:px-6  lg:px-8">
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">
@@ -72,19 +85,14 @@ export default function Product({ productName }: { productName: string }) {
         </nav>
 
         {/* Image gallery */}
-        <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-          {product.images.map((image, index) => (
-            <div
-              key={index}
-              className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg"
-            >
-              <img
-                alt={image.alt}
-                src={image.src}
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          ))}
+        <div className="w-full flex justify-center  items-center bg-gray-100 px-10 py-12 rounded-3xl mt-20">
+          <Image
+            alt={product.name}
+            src={product.images}
+            width={800}
+            height={800}
+            //responsive
+          />
         </div>
 
         {/* Product info */}
@@ -95,11 +103,32 @@ export default function Product({ productName }: { productName: string }) {
             </h1>
           </div>
 
+          <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+            {/* Description and details */}
+            <div>
+              <h3 className="sr-only">Description</h3>
+              <p className="text-base text-gray-900">{product.description}</p>
+            </div>
+            <div className="mt-10">
+              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
+              <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                {product.highlights.map((highlight) => (
+                  <li key={highlight} className="text-gray-400">
+                    <span className="text-gray-600">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-10">
+              <h2 className="text-sm font-medium text-gray-900">Details</h2>
+              <p className="text-sm text-gray-600">{product.details}</p>
+            </div>
+          </div>
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-gray-900">
-              More Details
+              Composition:
             </p>
             <form className="mt-10">
               {/* formula */}
@@ -134,35 +163,13 @@ export default function Product({ productName }: { productName: string }) {
                   Request for Price
                 </button>
               </Link>
-              <button
+              {/* <button
                 type="button"
                 className="mt-2 flex w-full items-center justify-center rounded-md bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-transparent border-2 border-green-500 hover:text-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Message on WhatsApp
-              </button>
+              </button> */}
             </form>
-          </div>
-
-          <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
-              <p className="text-base text-gray-900">{product.description}</p>
-            </div>
-            <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-              <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                {product.highlights.map((highlight) => (
-                  <li key={highlight} className="text-gray-400">
-                    <span className="text-gray-600">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-              <p className="text-sm text-gray-600">{product.details}</p>
-            </div>
           </div>
         </div>
       </div>
