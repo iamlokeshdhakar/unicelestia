@@ -70,7 +70,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: "/images/apt_1.png",
+    images: "/images/rostro.png",
     formula: [
       { name: "Rabeprazole Sodium", percent: "20%" },
       { name: "Domperidone", percent: "15%" }
@@ -88,7 +88,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: "/images/apt_1.png",
+    images: "/images/tedflam.png",
     formula: [
       { name: "Antioxidants", percent: "25%" },
       { name: "Multivitamins", percent: "20%" },
@@ -108,7 +108,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: "/images/apt_1.png",
+    images: "/images/injection.png",
     formula: [
       { name: "Ceftriaxone", percent: "50%" },
       { name: "Sulbactam", percent: "50%" }
@@ -126,7 +126,7 @@ export const products = [
       { id: 1, name: "Home", href: "/" },
       { id: 2, name: "Products", href: "#" }
     ],
-    images: "/images/apt_1.png",
+    images: "/images/apts2.png",
     formula: [
       { name: "Lycopene", percent: "20%" },
       { name: "Multivitamins", percent: "30%" },
