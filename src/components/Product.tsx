@@ -87,10 +87,10 @@ export default function Product({ productName }: { productName: string }) {
           />
           <Image
             alt={product.name}
-            src={"/images/atptab.png"}
+            src={product.productImg}
             className="px-12"
-            width={800}
-            height={800}
+            width={700}
+            height={600}
             //responsive
           />
         </div>
@@ -112,7 +112,7 @@ export default function Product({ productName }: { productName: string }) {
             <div className="w-full py-8 flex justify-center flex-col items-center relative bg-gray-100 px-10 py-12 rounded-3xl mt-10">
               <Image
                 src={product.compImage}
-                alt="atptab"
+                alt={product.name}
                 height={800}
                 className="rounded-3xl"
                 width={600}
