@@ -85,10 +85,18 @@ export default function Product({ productName }: { productName: string }) {
         </nav>
 
         {/* Image gallery */}
-        <div className="w-full flex justify-center  items-center bg-gray-100 px-10 py-12 rounded-3xl mt-20">
+        <div className="w-full flex justify-center flex-col items-center bg-gray-100 px-10 py-12 rounded-3xl mt-20">
           <Image
             alt={product.name}
             src={product.images}
+            width={800}
+            height={800}
+            //responsive
+          />
+          <Image
+            alt={product.name}
+            src={"/images/atptab.png"}
+            className="px-12"
             width={800}
             height={800}
             //responsive
@@ -106,22 +114,72 @@ export default function Product({ productName }: { productName: string }) {
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
             {/* Description and details */}
             <div>
-              <h3 className="sr-only">Description</h3>
-              <p className="text-base text-gray-900">{product.description}</p>
+              <h3 className="text-lg font-bold text-gray-900">Description:</h3>
+              <p className="text-gray-900">{product.description}</p>
             </div>
             <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-              <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                {product.highlights.map((highlight) => (
-                  <li key={highlight} className="text-gray-400">
-                    <span className="text-gray-600">{highlight}</span>
+              <h3 className="text-lg font-bold text-gray-900">
+                Key Ingredients:
+              </h3>
+              <ul role="list" className="list-disc space-y-2 pl-4">
+                {product.ingredients.map((ingredients) => (
+                  <li key={ingredients} className="text-gray-400">
+                    <span className="text-gray-600">{ingredients}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-              <p className="text-sm text-gray-600">{product.details}</p>
+              <h3 className="font-bold text-lg text-gray-900">Indications:</h3>
+              <ul role="list" className="list-disc space-y-2 pl-4">
+                {product.indications.map((indications, i) => (
+                  <li key={i} className="text-gray-400">
+                    <span className="text-gray-600">{indications}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-10">
+              <h3 className="font-bold text-lg text-gray-900">Dosage:</h3>
+              <ul role="list" className="list-disc space-y-2 pl-4">
+                {product.dosage.map((dosage, i) => (
+                  <li key={i} className="text-gray-400">
+                    <span className="text-gray-600">
+                      {" "}
+                      <span className="font-bold">{dosage.age}:</span>{" "}
+                      {dosage.description}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mt-10">
+                Side Effects:
+              </h3>
+              <p className="text-gray-900">{product.sideEffect}</p>
+            </div>
+
+            <div className="mt-10">
+              <h3 className="font-bold text-lg text-gray-900">Precautions:</h3>
+              <ul role="list" className="list-disc space-y-2 pl-4">
+                {product.precautions.map((precautions, i) => (
+                  <li key={i} className="text-gray-400">
+                    <span className="text-gray-600">{precautions}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-10">
+              <p className="text-gray-600">
+                <span className="font-bold text-black">Storage: </span>
+                Store in a cool, dry place away from direct sunlight. Keep out
+                of reach of children.
+              </p>
+            </div>
+            <div className="mt-10">
+              <h2 className="text-lg font-bold  text-gray-900">Conclusion:</h2>
+              <p className="text-gray-600">{product.conclusion}</p>
             </div>
           </div>
           {/* Options */}

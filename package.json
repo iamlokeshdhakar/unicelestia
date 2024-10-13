@@ -1,5 +1,6 @@
 {
   "name": "unicelestia",
+  "description": "Unicelestia Pvt. Ltd. is dedicated to advancing healthcare through the development of innovative and high-quality pharmaceutical products. Our commitment to safety and efficacy drives our research and formulation processes, ensuring that we meet the needs of patients and healthcare professionals alike. Together, we strive to create a healthier future for all.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
