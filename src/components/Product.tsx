@@ -1,5 +1,6 @@
 "use client"
 import { products } from "@/lib/constant"
+import { MessageSquare, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -72,20 +73,11 @@ export default function Product({ productName }: { productName: string }) {
                 </div>
               </li>
             ))}
-            <li className="text-sm">
-              <Link
-                href={product.href}
-                aria-current="page"
-                className="font-medium text-gray-500 hover:text-gray-600"
-              >
-                {product.name}
-              </Link>
-            </li>
           </ol>
         </nav>
 
         {/* Image gallery */}
-        <div className="w-full flex justify-center flex-col items-center bg-gray-100 px-10 py-12 rounded-3xl mt-20">
+        <div className="w-full flex justify-center flex-col items-center bg-gray-100 py-12 rounded-3xl mt-20">
           <Image
             alt={product.name}
             src={product.images}
@@ -103,131 +95,111 @@ export default function Product({ productName }: { productName: string }) {
           />
         </div>
 
-        {/* Product info */}
-        <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
-          <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              {product.name}
-            </h1>
+        <div className="mx-auto mt-28 sm:max-w-[60%] px-2">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl mt-10">
+            {product.name}
+          </h1>
+          {/* Description and details */}
+          <div className="mt-10">
+            <h3 className="text-lg font-bold text-gray-900">Description:</h3>
+            <p className="text-gray-900">{product.description}</p>
           </div>
 
-          <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
-            <div>
-              <h3 className="text-lg font-bold text-gray-900">Description:</h3>
-              <p className="text-gray-900">{product.description}</p>
+          <div className="mt-10">
+            <h3 className="text-lg font-bold text-gray-900">
+              Key Ingredients:
+            </h3>
+            <div className="w-full py-8 flex justify-center flex-col items-center relative bg-gray-100 px-10 py-12 rounded-3xl mt-10">
+              <Image
+                src={product.compImage}
+                alt="atptab"
+                height={800}
+                className="rounded-3xl"
+                width={600}
+              />
             </div>
-            <div className="mt-10">
-              <h3 className="text-lg font-bold text-gray-900">
-                Key Ingredients:
-              </h3>
-              <ul role="list" className="list-disc space-y-2 pl-4">
-                {product.ingredients.map((ingredients) => (
-                  <li key={ingredients} className="text-gray-400">
-                    <span className="text-gray-600">{ingredients}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10">
-              <h3 className="font-bold text-lg text-gray-900">Indications:</h3>
-              <ul role="list" className="list-disc space-y-2 pl-4">
-                {product.indications.map((indications, i) => (
-                  <li key={i} className="text-gray-400">
-                    <span className="text-gray-600">{indications}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10">
-              <h3 className="font-bold text-lg text-gray-900">Dosage:</h3>
-              <ul role="list" className="list-disc space-y-2 pl-4">
-                {product.dosage.map((dosage, i) => (
-                  <li key={i} className="text-gray-400">
-                    <span className="text-gray-600">
-                      {" "}
-                      <span className="font-bold">{dosage.age}:</span>{" "}
-                      {dosage.description}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 mt-10">
-                Side Effects:
-              </h3>
-              <p className="text-gray-900">{product.sideEffect}</p>
-            </div>
-
-            <div className="mt-10">
-              <h3 className="font-bold text-lg text-gray-900">Precautions:</h3>
-              <ul role="list" className="list-disc space-y-2 pl-4">
-                {product.precautions.map((precautions, i) => (
-                  <li key={i} className="text-gray-400">
-                    <span className="text-gray-600">{precautions}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-10">
-              <p className="text-gray-600">
-                <span className="font-bold text-black">Storage: </span>
-                Store in a cool, dry place away from direct sunlight. Keep out
-                of reach of children.
-              </p>
-            </div>
-            <div className="mt-10">
-              <h2 className="text-lg font-bold  text-gray-900">Conclusion:</h2>
-              <p className="text-gray-600">{product.conclusion}</p>
-            </div>
+            {/* <ul role="list" className="list-disc space-y-2 pl-4 mt-10">
+              {product.ingredients.map((ingredients) => (
+                <li key={ingredients} className="text-gray-400">
+                  <span className="text-gray-600">{ingredients}</span>
+                </li>
+              ))}
+            </ul> */}
           </div>
-          {/* Options */}
-          <div className="mt-4 lg:row-span-3 lg:mt-0">
-            <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">
-              Composition:
-            </p>
-            <form className="mt-10">
-              {/* formula */}
-              <div className="mt-10">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-medium text-gray-900">
-                    Formulas Content
-                  </h3>
-                  <span className="text-sm font-medium text-primaryOrange hover:text-indigo-500">
-                    %
+          <div className="mt-10">
+            <h3 className="font-bold text-lg text-gray-900">Indications:</h3>
+            <ul role="list" className="list-disc space-y-2 pl-4">
+              {product.indications.map((indications, i) => (
+                <li key={i} className="text-gray-400">
+                  <span className="text-gray-600">{indications}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-10">
+            <h3 className="font-bold text-lg text-gray-900">Dosage:</h3>
+            <ul role="list" className="list-disc space-y-2 pl-4">
+              {product.dosage.map((dosage, i) => (
+                <li key={i} className="text-gray-400">
+                  <span className="text-gray-600">
+                    {" "}
+                    <span className="font-bold">{dosage.age}:</span>{" "}
+                    {dosage.description}
                   </span>
-                </div>
-                <fieldset aria-label="Choose a size" className="mt-4">
-                  <div className="gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                    {product.formula.map((size) => (
-                      <div
-                        key={size.name}
-                        className="group relative flex items-center justify-between rounded-md border px-4 py-3 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none"
-                      >
-                        <span>{size.name}</span>
-                        <span>{size.percent}</span>
-                      </div>
-                    ))}
-                  </div>
-                </fieldset>
-              </div>
-              <Link href={"tel:+918923165656"} target="_blank">
-                <button
-                  type="button"
-                  className="mt-10 flex w-full items-center justify-center rounded-md bg-primaryOrange px-8 py-3 text-base font-medium text-white hover:bg-transparent border-2 border-primaryOrange hover:text-primaryOrange focus:outline-none focus:ring-2 focus:ring-primaryOrange focus:ring-offset-2"
-                >
-                  Request for Price
-                </button>
-              </Link>
-              {/* <button
-                type="button"
-                className="mt-2 flex w-full items-center justify-center rounded-md bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-transparent border-2 border-green-500 hover:text-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-              >
-                Message on WhatsApp
-              </button> */}
-            </form>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mt-10">
+              Side Effects:
+            </h3>
+            <p className="text-gray-900">{product.sideEffect}</p>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-bold text-lg text-gray-900">Precautions:</h3>
+            <ul role="list" className="list-disc space-y-2 pl-4">
+              {product.precautions.map((precautions, i) => (
+                <li key={i} className="text-gray-400">
+                  <span className="text-gray-600">{precautions}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-10">
+            <p className="text-gray-600">
+              <span className="font-bold text-black">Storage: </span>
+              Store in a cool, dry place away from direct sunlight. Keep out of
+              reach of children.
+            </p>
+          </div>
+          <div className="mt-10">
+            <h2 className="text-lg font-bold  text-gray-900">Conclusion:</h2>
+            <p className="text-gray-600">{product.conclusion}</p>
+          </div>
+          <div className="flex gap-6 md:flex-row flex-col flex-wrap justify-center items-center mt-10 ">
+            <Link href="tel:+918923165656" className="w-full md:w-[40%]">
+              <button className="flex items-center w-full justify-center space-x-2 rounded-md border-2 border-primaryOrange px-2 py-4 font-medium transition bg-primaryOrange text-white">
+                <span>
+                  <Phone size={20} strokeWidth={1.5} />
+                </span>
+                <span> Request a Quote </span>
+              </button>
+            </Link>
+
+            <Link
+              href="mailto:ucpharmaltd@gmail"
+              target="_blank"
+              className="w-full md:w-[40%]"
+            >
+              <button className="flex items-center w-full justify-center space-x-2 rounded-md border-2 border-green-500 px-2 py-4 font-medium transition bg-green-500 text-white">
+                <span>
+                  <MessageSquare size={20} strokeWidth={1.5} />
+                </span>
+                <span>WhatsApp</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
